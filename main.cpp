@@ -52,7 +52,6 @@ int main(){
   ball.PhysicsBody.velocity.x = BALLSPEED;
 
   SetTargetFPS(60);
-  env.setup();
 
   bool reset;
 
