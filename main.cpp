@@ -110,7 +110,10 @@ int main(){
     }
 
     if (ball.PhysicsBody.isColliding){
-      ball.PhysicsBody.velocity.x = -ball.PhysicsBody.velocity.x;
+      ball.PhysicsBody.velocity.x = (ball.PhysicsBody.position.x > 100)
+        ? -BALLSPEED
+        : BALLSPEED;
+
       float collVel = ball.PhysicsBody.collidingObjects[0]->velocity.y;
 
       (collVel)
