@@ -72,16 +72,20 @@ int main(){
 
     reset = false;
 
-    if (IsKeyDown(KEY_W))
+    if (IsKeyDown(KEY_W) &&
+        paddle1.PhysicsBody.position.y > 40)
       paddle1.PhysicsBody.velocity.y = -PADDLESPEED;
 
-    if (IsKeyDown(KEY_S))
+    if (IsKeyDown(KEY_S) &&
+        paddle1.PhysicsBody.position.y < 160)
       paddle1.PhysicsBody.velocity.y = PADDLESPEED;
 
-    if (IsKeyDown(KEY_I))
+    if (IsKeyDown(KEY_I) &&
+        paddle2.PhysicsBody.position.y > 40)
       paddle2.PhysicsBody.velocity.y = -PADDLESPEED;
 
-    if (IsKeyDown(KEY_K))
+    if (IsKeyDown(KEY_K) &&
+        paddle2.PhysicsBody.position.y < 160)
       paddle2.PhysicsBody.velocity.y = PADDLESPEED;
 
     if (ball.PhysicsBody.position.y < 5)
