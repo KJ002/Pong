@@ -116,9 +116,9 @@ int main(){
 
       float collVel = ball.PhysicsBody.collidingObjects[0]->velocity.y;
 
-      (collVel)
-        ? ball.PhysicsBody.velocity.y = (collVel > 0) ? BALLSPEED : -BALLSPEED
-        : ball.PhysicsBody.velocity.y = 0;
+      ball.PhysicsBody.velocity.y = (collVel)
+        ? (collVel > 0) ? BALLSPEED : -BALLSPEED
+        : 0;
     }
 
     BeginDrawing();
